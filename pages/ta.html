@@ -1,0 +1,53 @@
+<div ng-controller="TeacherController" id="taView">
+	<div class="left">
+		<table class="table table-striped">
+	 		<tr>
+	 			<th> <h2>Add a TA:</h2></th>
+	 		</tr>
+	 		<tr>
+	 			<td>
+					<select class="btn btn-default dropdown-toggle" ng-model="currentTAClass" ng-options="class.className for (name, class) in listOfClasses"><option value="">Class List</option></select>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<td>
+					<input placeholder="Email" type="text" class="form-control" ng-model="studentName">
+					<button class="btn btn-default" id="addTA" ng-click="addStudent()">Add</button>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th> <h2>Remove a TA:</h2></th>
+	 		</tr>
+	 		<tr>
+	 			<td>
+					<select class="btn btn-default dropdown-toggle" ng-model="currentTAClass" ng-options="class.className for (name, class) in listOfClasses"><option value="">Class List</option></select>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<td>
+					<input placeholder="Email" type="text" class="form-control" ng-model="studentName">
+					<button class="btn btn-default" id="addTA" ng-click="addStudent()">Add</button>
+	 			</td>
+	 		</tr>
+		</table>
+	</div>
+	<div class="center">
+
+		<h1 id="queueHeader">
+			<span id="queueHeaderText" ><i class="fa fa-spinner fa-spin fa-fw"></i> Analytics <i class="fa fa-spinner fa-spin fa-fw"></i></span>
+		</h1>
+		  
+	</div>
+	<div class="right">
+
+		<label>Enter Note: <textarea ng-model="note.note" ng-change="note.$save()"></textarea></label><br>
+
+
+	</div>
+	</div>
+		</aside>
+	<span id="classLeftLine">
+	
+	</span>
+
+</div>

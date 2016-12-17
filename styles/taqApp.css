@@ -1,0 +1,264 @@
+html, body{
+	margin:0;
+	height:100%;
+}
+#signInModalHeader{
+	text-align:center;
+}
+#iAmModalHeader{
+	text-align:center;
+}
+
+
+#navigation{
+	margin-left: 25%;
+	margin-right:25%;
+}
+
+.loginInfo{
+	margin-bottom: 10px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover{
+    background-color: #002248;
+}
+
+.blue{
+	margin-top: 2%;
+	margin-left:40%;
+	background-color: #002248;
+}
+
+#taqLogo{
+	width: 30%;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+#taqLogoHeader{
+	width:145px;
+	height:auto;
+}
+#taqLogoHeaderBar{
+	width:10%;
+	height:100%;
+}
+#imageContainer{
+	text-align: center;
+	margin-top: 2%;
+}
+#header{
+	background-color:#002248;
+	height: 20%;
+}
+.navButtons{
+	margin-left: 91%;
+    background-color: white;
+}
+table, th, tr, td{
+	text-align: center;
+}
+
+#studentView table.studentQueueTable tr:nth-child(even){
+	background-color: #F2DEDE;
+}
+
+#studentView #queueHeader{
+	text-align:center;
+}
+
+#studentView #queueHeaderText{
+	border-top:solid;
+	border-bottom:solid;
+	border-radius:5px;
+	padding: 10px;
+}
+
+
+
+#taView table.studentQueueTable tr:nth-child(even){
+	background-color: #F2DEDE;
+}
+
+#taView #queueHeader{
+	text-align:center;
+}
+
+#taView #queueHeaderText{
+	border-top:solid;
+	border-bottom:solid;
+	border-radius:5px;
+	padding: 10px;
+}
+
+.emailText{
+	word-wrap: break-word;
+}
+
+.center{
+	text-align: center;
+}
+
+#signout{
+	text-align: center;
+}
+#signout #logo img{
+	text-align:center;
+	border-radius: 5px;
+}
+
+#signoutButton{
+	margin-top: 5px;
+	text-align: right;
+}
+#addTA{
+	margin-top:7px;
+}
+table{
+	table-layout: fixed;
+    width: 100%;
+}
+td{
+	table-layout: fixed;
+    width: 100%;
+}
+#removeStudentDrop{
+	width:100%;
+}
+.queueTable{
+	border-left: solid;
+	border-right: solid;
+}
+
+@media only screen and (max-width: 960px) {
+	html, body{
+		margin:0;
+		height:100%;
+	}
+	#signInModalHeader{
+		text-align:center;
+	}
+	#iAmModalHeader{
+		text-align:center;
+	}
+
+
+	#navigation{
+		margin-left: 25%;
+		margin-right:25%;
+	}
+
+	.loginInfo{
+		margin-bottom: 10px;
+	}
+
+	.nav-pills > li.active > a, .nav-pills > li.active > a:hover{
+	    background-color: #002248;
+	}
+
+	.blue{
+		margin-top: 2%;
+		margin-left:40%;
+		background-color: #002248;
+	}
+
+	#taqLogo{
+		width: 30%;
+	    height: auto;
+	    border-radius: 10px;
+	    text-align: center;
+	}
+	#taqLogoHeader{
+		width:145px;
+		height:auto;
+	}
+	#taqLogoHeaderBar{
+		width:45%;
+		height:100%;
+	}
+	#imageContainer{
+		text-align: center;
+		margin-top: 2%;
+	}
+	#header{
+		background-color:#002248;
+		height: 20%;
+	}
+	.navButtons{
+		margin-left: 91%;
+	    background-color: white;
+	}
+	table, th, tr, td{
+		text-align: center;
+	}
+
+	#studentView table.studentQueueTable tr:nth-child(even){
+		background-color: #F2DEDE;
+	}
+
+	#studentView #queueHeader{
+		text-align:center;
+	}
+
+	#studentView #queueHeaderText{
+		border-top:solid;
+		border-bottom:solid;
+		border-radius:5px;
+		padding: 10px;
+	}
+
+	.emailText{
+		word-wrap: break-word;
+	}
+
+	#taView table.studentQueueTable tr:nth-child(even){
+		background-color: #F2DEDE;
+	}
+
+	#taView #queueHeader{
+		text-align:center;
+	}
+
+	#taView #queueHeaderText{
+		border-top:solid;
+		border-bottom:solid;
+		border-radius:5px;
+		padding: 10px;
+	}
+
+	.center{
+		text-align: center;
+	}
+
+	#signout{
+		text-align: center;
+	}
+	#signout #logo img{
+		text-align:center;
+		border-radius: 5px;
+	}
+
+	#signoutButton{
+		margin-top: 5px;
+		text-align: right;
+	}
+	#addTA{
+		margin-top:7px;
+	}
+	table{
+		table-layout: fixed;
+	    width: 100%;
+	}
+	td{
+		table-layout: fixed;
+	    width: 100%;
+	}
+	#removeStudentDrop{
+		width:100%;
+	}
+	.queueTable{
+		border-left: solid;
+		border-right: solid;
+	}
+
+}

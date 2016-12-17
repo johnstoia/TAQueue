@@ -1,0 +1,118 @@
+<div id="studentView" class="row">
+	<div class="col-md-3"">
+		<table class="table table-striped">
+	 		<tr>
+	 			<th> <h2>Select Your Class To Learn!</h2></th>
+	 		</tr>
+	 		<tr>
+	 			<td>
+					<select class="btn btn-default dropdown-toggle" ng-model="currentClass" ng-options="class.className for (name, class) in listOfClasses"><option value="">Class List</option></select>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th> <h2 ng-show="isTA" >Select Your Class To Teach!</h2></th>
+	 		</tr>
+	 		<tr>
+	 			<td>
+					<select ng-show="isTA" class="btn btn-default dropdown-toggle" ng-model="currentTAClass" ng-options="class.class for (name, class) in listOfTAClasses"><option value="">Class List</option></select>
+	 			</td>
+	 		</tr>
+		</table>
+
+
+		
+
+	</div>
+	<div class="col-md-6 queueTable" ng-show="taView">
+
+		<h1 id="queueHeader" class="row">
+			<span id="queueHeaderText" ><i class="fa fa-spinner fa-spin fa-fw"></i> Queue <i class="fa fa-spinner fa-spin fa-fw"></i></span>
+		</h1>
+		  <table class="studentQueueTable table" >
+		    <thead>
+		      <tr>
+		        <th>First Name</th>
+		        <th>Last Name</th>
+		        <th>Expected Wait Time</th>
+		        <th>Remove</th>
+		      </tr>
+		    </thead>
+		    <tbody dnd-list="students">
+		    <!-- dnd-draggable="student"
+					dnd-moved="students.splice($index, 1)"
+					dnd-effect-allowed="move"
+					dnd-selected="models.selected = student"
+					ng-class="{'selected': models.selected === student}" -->
+		      <tr ng-repeat="student in students">
+		        <td>{{student.first}}</td>
+		        <td class="emailText">{{student.email}}</td>
+		        <td>{{student.time | secondsToDateTime | date:'HH:mm:ss'}}</td>
+		        <td>
+		        	<a class="btn btn-danger" ng-click="students.$remove(student)">
+  					<i class="fa fa-trash-o fa-lg"></i> Remove Student</a>
+  				</td>
+		      </tr>
+		    </tbody>
+		  </table>
+	</div>
+	<div class="col-md-6 queueTable" ng-show="studentView">
+
+		<h1 id="queueHeader" class="row">
+			<a class="btn btn-danger" ng-click="removeSelf()">
+  			<i class="fa fa-trash-o fa-lg"></i> Leave Queue</a>
+			<span id="queueHeaderText" ><i class="fa fa-spinner fa-spin fa-fw"></i> Queue <i class="fa fa-spinner fa-spin fa-fw"></i></span>
+
+			<a class="btn btn-success" ng-click="addSelf()">
+  			<i class="fa fa-plus-square-o fa-lg"></i> Join Queue</a>
+		</h1>
+		  <table class="studentQueueTable table">
+		    <thead>
+		      <tr>
+		        <th>Student Name</th>
+		        <th>Student Email</th>
+		        <th>Expected Wait Time</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr ng-repeat="student in students">
+		        <td>{{student.first}}</td>
+		        <td class="emailText">{{student.email}}</td>
+		        <td>{{student.time | secondsToDateTime | date:'HH:mm:ss'}}</td>
+		      </tr>
+		    </tbody>
+		  </table>
+	</div>
+	<div class="col-md-3" ng-show="taView">
+
+		<table class="table table-striped">
+	 		<tr>
+	 			<th> <h2>Enter Note: </h2></th>
+	 		</tr>
+	 		<tr >
+	 			<td>
+	 				<textarea ng-model="note.note" ng-change="note.$save()"></textarea></label><br>
+	 			</td>
+	 		</tr>
+		</table>
+
+
+	</div>
+	<div class="col-md-3" ng-show="studentView">
+		<table class="table table-striped">
+	 		<tr>
+	 			<th> <h2>Instructor Notes</h2></th>
+	 		</tr>
+	 		<tr >
+	 			<td>
+	 				<span >{{note.note}}</span>
+	 			</td>
+	 		</tr>
+		</table>
+	</div>
+	</div>
+		</aside>
+	<span id="classLeftLine">
+	
+	</span>
+
+</div>
